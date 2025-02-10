@@ -81,6 +81,7 @@ body {
     transition: transform 0.3s ease;
 }
 
+
 .memory-card:hover .photo-container img {
     transform: scale(1.05);
 }
