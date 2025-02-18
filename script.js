@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     } else {
-        // Main page functionality
+   
         const memoryTexts = document.querySelectorAll('.memory-text');
         
         memoryTexts.forEach(text => {
@@ -55,7 +55,27 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         
-        // Add smooth scroll behavior
+      
         document.documentElement.style.scrollBehavior = 'smooth';
+    }
+});
+
+
+function switchVersion(targetPage) {
+    document.body.classList.add('fade-out');
+    
+    setTimeout(() => {
+        window.location.href = targetPage;
+    }, 500);
+}
+
+
+window.addEventListener('load', () => {
+    document.body.classList.add('fade-in');
+});
+
+document.body.addEventListener('animationend', (e) => {
+    if (e.animationName === 'fadeIn') {
+        document.body.classList.remove('fade-in');
     }
 });
