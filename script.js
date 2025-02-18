@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             if (username === 'pitica' && password === 'açai') {
                 errorMessage.textContent = '';
+                localStorage.setItem('loggedIn', 'true');
                 window.location.href = 'index.html';
             } else {
                 errorMessage.textContent = 'Usuário ou senha incorretos';
